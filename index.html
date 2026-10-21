@@ -3,9 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Esmeralda</title>
+  <title>La Esmeralda</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  
+  <!-- NavBar -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Academia <span>La Esmeralda</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="activo">Inicio</a></li>
+        <li><a href="programas.html">Programas</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SLIDER (CARRUSEL DE IMÁGENES) -->
+    <section class="slider-container">
+      <div class="slide active">
+        <img src="https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=1200&q=80" alt="Entrenamiento de fútbol infantil">
+        <div class="slide-caption">
+          <h1>Entrena, Juega y Crece con Nosotros</h1>
+          <p>La escuela de fútbol formativo para los campeones del mañana.</p>
+          <a href="#contacto" class="btn-principal">Reserva tu Clase Gratis</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1200&q=80" alt="Cancha de fútbol verde">
+        <div class="slide-caption">
+          <h1>Valores, Disciplina y Trabajo en Equipo</h1>
+          <p>Formamos deportistas integrales en un ambiente seguro y familiar.</p>
+          <a href="programas.html" class="btn-principal">Ver Categorías</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80" alt="Partido juvenil de fútbol">
+        <div class="slide-caption">
+          <h1>Instalaciones y Entrenadores de Primer Nivel</h1>
+          <p>Metodología adaptada a cada etapa del desarrollo infantil y juvenil.</p>
+          <a href="horarios.html" class="btn-principal">Consultar Horarios</a>
+        </div>
+      </div>
+
+      <button class="slider-btn prev" onclick="cambiarSlide(-1)">&#10094;</button>
+      <button class="slider-btn next" onclick="cambiarSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN 1 -->
+    <section class="seccion-info">
+      <div class="texto-columna">
+        <h2>1. Formación Deportiva Integral</h2>
+        <p>En la Academia de Fútbol La Cantera nos enfocamos en la enseñanza progresiva de la técnica individual y colectiva. Nuestro objetivo principal es que cada niño y joven desarrolle sus habilidades psicomotrices mientras disfruta del deporte y aprende valores fundamentales como el respeto y la responsabilidad.</p>
+      </div>
+      <div class="multimedia-columna">
+        <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=800&q=80" alt="Niños entrenando fútbol">
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN 2 -->
+    <section class="seccion-fondo-alterno">
+      <div class="contenedor-interno">
+        <div class="texto-columna">
+          <h2>2. Categorías por Edades</h2>
+          <p>Contamos con grupos organizados desde la etapa de iniciación (Sub-6 y Sub-8), pasando por el desarrollo formativo (Sub-10 y Sub-12), hasta el nivel competitivo juvenil (Sub-14 y Sub-16). Cada grupo cuenta con planificación pedagógica especializada.</p>
+        </div>
+        <div class="multimedia-columna">
+          <img src="https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?auto=format&fit=crop&w=800&q=80" alt="Balón en el campo de juego">
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN 3 (CON VIDEO FORMATO WEB PARA RÚBRICA) -->
+    <section class="seccion-info">
+      <div class="texto-columna">
+        <h2>3. Metodología Dinámica en Cancha</h2>
+        <p>Nuestras sesiones combinan ejercicios de coordinación, control de balón, definición a portería y partidos reducidos. Observa en este video formativo cómo fomentamos la participación activa de todos nuestros alumnos en cada entrenamiento semanal.</p>
+      </div>
+      <div class="multimedia-columna">
+        <video controls poster="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=800&q=80">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video en formato web HTML5.
+        </video>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE INFORMACIÓN 4 -->
+    <section class="seccion-fondo-alterno">
+      <div class="contenedor-interno">
+        <div class="texto-columna">
+          <h2>4. Torneos y Convivencia Familiar</h2>
+          <p>Participamos regularmente en ligas locales y torneos estadales, promoviendo la sana competencia y la integración de los padres y representantes. Creemos firmemente que el apoyo familiar es el pilar del crecimiento deportivo de cada jugador.</p>
+        </div>
+        <div class="multimedia-columna">
+          <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Celebración en equipo">
+        </div>
+      </div>
+    </section>
+
+    <!-- ÚLTIMA SECCIÓN: FORMULARIO DE CONTACTO (3 CAMPOS EXACTOS + REQUIRED) -->
+    <section id="contacto" class="seccion-contacto">
+      <h2>Reserva tu Clase de Prueba</h2>
+      <p>Déjanos tus datos y nos comunicaremos contigo para confirmar tu horario.</p>
+      
+      <form class="formulario-contacto" action="#" method="post">
+        <div class="campo-form">
+          <label for="nombreApellido">Nombre y Apellido:</label>
+          <input type="text" id="nombreApellido" name="nombreApellido" placeholder="Ej. Carlos Pérez" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <div class="campo-form">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indica la edad del jugador y tu consulta..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer>
+    <p class="membrete-uba">
+      REPÚBLICA BOLIVARIANA DE VENEZUELA <br>
+      UNIVERSIDAD BICENTENARIA DE ARAGUA (UBA) <br>
+      VICERRECTORADO ACADÉMICO <br>
+      FACULTAD DE INGENIERÍA <br>
+      ESCUELA DE INGENIERÍA EN SISTEMAS
+    </p>
+    <p class="datos-autor">
+      Desarrollado por: <strong>Victoria Pinto</strong> | C.I.: <strong>V-31.817.300</strong>
+    </p>
+    <p class="copyright">
+      &copy; 2026 Academia de Fútbol La Cantera. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
