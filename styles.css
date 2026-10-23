@@ -1,9 +1,8 @@
-/* Paleta de colores inspirada en ColorHunt (Verde Pino predominante) */
 :root {
-  --verde-pino: #0B4F32;
-  --verde-oscuro: #062E1D;
+  --verde-pino: #74c244;
+  --verde-oscuro: #74C244;
   --verde-claro: #E8F3EE;
-  --amarillo-acento: #F4C430;
+  --amarillo-acento: #050400;
   --blanco: #FFFFFF;
   --gris-texto: #333333;
 }
@@ -25,10 +24,17 @@ body {
 header {
   background-color: var(--verde-pino);
   color: var(--blanco);
-  position: sticky;
+  position: relative;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.LaEsmeraldaLogo {
+  position: absolute;
+  z-index: 2;
+  width: 150px;
+  margin: 20px;
 }
 
 .navbar {
@@ -131,7 +137,7 @@ header {
 }
 
 .btn-principal:hover {
-  background-color: #ffd659;
+  background-color: #134707;
   transform: scale(1.05);
 }
 
@@ -261,12 +267,12 @@ header {
 }
 
 .btn-enviar:hover {
-  background-color: #e0b020;
+  background-color: #134707;
 }
 
 /* FOOTER */
 footer {
-  background-color: var(--verde-oscuro);
+  background-color: #134707;
   color: var(--blanco);
   text-align: center;
   padding: 2.5rem 1.5rem;
@@ -292,6 +298,10 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .LaEsmeraldaLogo {
+    width: 85px;
+    margin: 10px;
+  }
   .navbar {
     flex-direction: column;
     gap: 1rem;
@@ -299,5 +309,14 @@ footer {
   .seccion-info,
   .seccion-fondo-alterno .contenedor-interno {
     flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .LaEsmeraldaLogo {
+    width: 120px;
+    margin: 10px;
+  }
+  .logo {
+    margin-left: 110px;
   }
 }
